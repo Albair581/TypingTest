@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>Type Test</title>
+        <link rel="stylesheet" href="style.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    </head>
+    <body>
+        <div id="myModal" class="modal">
+            <div class="modal-content">
+                <span class="close" style="font-size: 50px;">&times;</span>
+                <h1>You <span class="passm">passed</span> the test<span class="pem">!</span></h1>
+                <label>Time Used: </label><br>
+                <h2 class="timem"></h2>
+                <label>Words Typed per Minute: </label><br>
+                <h2 class="wpmm"></h2>
+                <label>Characters Typed per Minute: </label><br>
+                <h2 class="cpmm"></h2>
+                <label>Accuracy: </label><br>
+                <h2 class="accm"></h2>
+                <label>Difficulty: </label><br>
+                <h2 class="diffym"></h2>
+                <label>Mode: </label><br>
+                <h2 class="modem"></h2>
+                <h3>Congratulations!</h3>
+            </div>
+        </div>
+
+        <h1>TypeFly Typing Test</h1>
+        <h2>Train your typing to fly!</h2>
+        <details>
+            <summary>What is a typing test?</summary>
+            <article>
+                A typing test is an assessment that measures how quickly and accurately someone can type. 
+                Typing tests are often used by employers to evaluate a candidate's keyboard proficiency and determine 
+                if they can handle the demands of a job.
+            </article>
+        </details>
+        <br>
+        <h2>Let's Try!</h2>
+        <div id="config">
+            <p>But before that, you will need to choose some options&hellip;&hellip;</p>
+            <fieldset>
+                <legend>Configurations</legend>
+                <label for="testmode">Select Your Test Mode</label>
+                <br>
+                <select id="testmode">
+                    <option value="word">Word Trainer</option>
+                    <option value="speed">Pure Speed</option>
+                </select>
+                <br><br>
+                <label for="diffy">Select Your Difficulty</label>
+                <br>
+                <select id="diffy">
+                    <option value="l0">Random</option>
+                    <option value="l1">Easy peasy!</option>
+                    <option value="l2">Wow! Easy.</option>
+                    <option value="l3">Okey dokey.</option>
+                    <option value="l4">Ehhh...</option>
+                    <option value="l5">Whew!</option>
+                    <option value="l6">That was not bad!</option>
+                    <option value="l7">Yeah. Wow.</option>
+                    <option value="l8">Oh my god. Holly!</option>
+                    <option value="l9">My fingers!</option>
+                    <option value="l10">My KEYBOARD!!!</option>
+                </select>
+                <br><br>
+                <button id="starttest">Start my Test!</button>
+            </fieldset>
+        </div>
+        <br><br>
+        <div class="wrapper" hidden>
+            <input type="text" class="input-field">
+            <div class="content-box">
+                <div class="typing-text">
+                    <p></p>
+                </div>
+                <div class="content">
+                    <ul class="result-details">
+                        <li class="time">
+                            Time Left:&nbsp;<br>
+                            <span><b>120</b>s</span>
+                        </li>
+                        <li class="mistake">
+                            Accuracy:&nbsp;<br>
+                            <span>100.00 %</span>
+                        </li>
+                        <li class="miss">
+                            Mistakes:&nbsp;<br>
+                            <span>0</span>
+                        </li>
+                        <li class="wpm">
+                            WPM:&nbsp;
+                            <span>0</span>
+                        </li>
+                        <li class="cpm">
+                            CPM:&nbsp;
+                            <span>0</span>
+                        </li>
+                    </ul>
+                    <button id="trytry">New Test</button>
+                </div>
+            </div>
+        </div>
+
+        <script src="js/paragraph.js"></script>
+        <script src="js/script.js"></script>
+    </body>
+</html>
